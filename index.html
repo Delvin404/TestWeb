@@ -84,7 +84,7 @@ hr{border:none;border-top:1px dashed rgba(43,17,80,.3);margin:16px 0}
     <hr>
     <div class="label">Everything else this tab can see</div>
     <div class="grid" id="scan"></div>
-    <p class="fine">HAHA</p>
+    <p class="fine">HAHA.</p>
   </div>
 </div>
 
@@ -132,7 +132,7 @@ function show(place, ip){
   if(ip) $('ip').textContent = ip;
   $('place').textContent = place || 'Location not found';
   $('note').textContent = place
-    ? "That's the location your network address points to. It's usually accurate to the city, not your street."
+    ? ''
     : "All three lookup services were blocked or unreachable, usually because of an ad blocker, privacy extension, or a network that strips this kind of request.";
   $('scan').innerHTML = '';
   clientData().forEach(r => addRow('scan', r[0], r[1]));
